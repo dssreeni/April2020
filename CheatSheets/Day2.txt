@@ -1,0 +1,46 @@
+Cheat sheet:
+Basic Data types
+containier [List] (Tuple) {Dict}, slidcingh dicing
+SPyder/Juputor 
+Python case sentsiteve
+comments 
+multi lime commnets
+etc...
+
+Dataset of Titanic: https://www.kaggle.com/c/titanic/data
+
+Github.com/DSSreeni
+------------------------------
+Dataset --> DataFrame
+TitanicDataframe = load the data path... 
+
+TOtal = 891 Passengers
+
+Survived: 1
+Raghav: Majority of the 1st class people(216) must have survivied 136/216 are survicved
+1st class: 136/216 
+2nd class: 87/184
+3rd class: 119/491 --> 372/491 are not survived if they belong 3rd clals
+
+ 
+Vidya: 1st class with 	= S and sex = Female must have survivied - 48/50
+2nd and 3rd class ,Embark= C, Q and Sex = Male 78/93/891
+
+Venkat: If Age < 15 must have survivied 45/78
+If Age >= 15 must have NS 390/631/891
+If Fare > 206 must have survivied 14/20/891
+If SibSp > 0 must have survivied
+
+600+(Surivived)/700(Conditional selection)/891(Ttoal)
+
+Ashish: age < 15 OR > 50 and Sex = Female (Mostly survived) & Cabin = Yes    22/35/891
+Ashish: age < 15 OR > 50 and Sib<12 (Mostly survived) & Cabin = Yes    45/50/891
+Ashish: age < 15 OR > 50     200/500/891
+
+OverFittng and Underfitting, time vs accuracy
+
+Age 15-50 range and sex - Female
+
+
+Human Learninfg --?> ML
+
