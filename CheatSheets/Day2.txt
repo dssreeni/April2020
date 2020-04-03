@@ -7,6 +7,8 @@ comments
 multi lime commnets
 etc...
 
+Download software: https://www.anaconda.com/distribution/
+ 
 Dataset of Titanic: https://www.kaggle.com/c/titanic/data
 
 Github.com/DSSreeni
