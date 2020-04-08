@@ -1,0 +1,29 @@
+
+if cabin = Yes
+and Emabrekd = H
+Surviedd
+Else
+NS
+
+
+If ststics(groupBy) > 70% columns
+consider thos columns in the first pattern cracking	
+then follwed
+
+
+Pre-requisites for any ML programs:
+No data should be null. Option1: Remove nullable recors, Option2: Fill nullable recrods with your best guestimate
+All the columms should be numberic (Option is conver all alpha numerica columns to numeeric)
+
+20 vs 30
+Male Vs feamle
+
+Removed un wanted columns (Apply commonsense)
+
+Import Pandas as pd # fro Data Frames
+From SKLearn Import tree as t
+DecissionTree
+
+Model1(Learn from train data) = .fit(x, y) X: Input coums of Train Data and Y: Survived  - 100+ Patterns
+Y = Model1.Predict(Test Data) X: Input coums of Test Data
+
