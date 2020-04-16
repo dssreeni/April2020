@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-
 @author: Sreenivas.J
 """
 
 import pandas as pd
 import os
-from sklearn import preprocessing #For Imputation. 
+#from sklearn import preprocessing #Depricated  
+from sklearn.impute import SimpleImputer #New version
 from sklearn import tree
-from sklearn import model_selection #CV
+from sklearn import model_selection #When multiple models r there
 
 #changes working directory
 os.chdir("E:/Data Science/Data")
@@ -36,8 +36,9 @@ def extract_title(name):
 #and returns a list containing all the function call results.
 titanic['Title'] = titanic['Name'].map(extract_title)
 
+
 #Imputation work for missing data with default values
-mean_imputer = preprocessing.Imputer() #By defalut parameter is mean and let it use default one.
+mean_imputer = SimpleImputer() #By defalut parameter is mean and let it use default one.
 mean_imputer.fit(titanic_train[['Age','Fare']]) 
 #Age is missing in both train and test data.
 #Fare is NOT missing in train data but missing test data. Since we are playing on tatanic union data, we are applying mean imputer on Fare as well..
@@ -84,7 +85,7 @@ titanic2 = titanic1.drop(['PassengerId','Name','Age','Ticket','Cabin','Survived'
 titanic2.shape 
 titanic2.info()
 #Splitting tain and test data
-X_train = titanic2[0:titanic_train.shape[0]] #0 t0 891 records
+X_train = titanic2[0:891] #0 t0 891 records
 X_train.shape
 X_train.info()
 y_train = titanic_train['Survived']
@@ -94,14 +95,14 @@ y_train = titanic_train['Survived']
 tree_estimator = tree.DecisionTreeClassifier()
 #Add parameters for tuning
 #dt_grid = {'max_depth':[10, 11, 12], 'min_samples_split':[2,3,6,7,8], 'criterion':['gini','entropy']}
-dt_grid = {'max_depth':list(range(10,20)), 'min_samples_split':list(range(2,8)), 'criterion':['gini','entropy']}
+dt_grid = {'max_depth':list(range(10,30)), 'min_samples_split':list(range(2,8)), 'criterion':['gini','entropy']}
 
-param_grid = model_selection.GridSearchCV(tree_estimator, dt_grid, cv=10) #Evolution of tee
+param_grid = model_selection.GridSearchCV(tree_estimator, dt_grid, cv=9) #Evolution of tee
 param_grid.fit(X_train, y_train) #Building the tree
 param_grid.cv_results_
 print(param_grid.best_score_) #Best score
 print(param_grid.best_params_)
-#print(param_grid.score(X_train, y_train)) #Train score  #Evalution of tree
+print(param_grid.score(X_train, y_train)) #Train score  #Evalution of tree
 
 #Explore feature importances calculated by decision tree algorithm
 #best_estimator_ gives final best parameters. 
@@ -116,4 +117,4 @@ X_test.shape
 X_test.info()
 titanic_test['Survived'] = param_grid.predict(X_test)
 
-titanic_test.to_csv('submission_EDA_FE_DT_CV.csv', columns=['PassengerId','Survived'],index=False)
+titanic_test.to_csv('Sub_Params_CV_EDA_FE.csv', columns=['PassengerId','Survived'],index=False)
