@@ -1,0 +1,60 @@
+Journey of DT and then CV and then Bagging Classifier and then RandomForest
+-------------------------------
+DT
+DT with Cross Validation data (CV)
+DT with CV with Parameters
+EDA + 
+FE (Extraction of Title from Name)
+FamilySize = Parch + SibSip
+Product: Bahamas, RC, Titanic2
+
+Ensembles:
+Build multiple model
+BootStap AGgreation (BAG)
+-----------------------
+DT(Original) - Sex_M sex_F
+BT1 - Sex_Male .. , Title_Mr .. Embarked_H .. 0.20 Embarked_S .. 0.10
+BT2
+BT3
+BT4 - Sex_Male .. 0.36, Title_Mr .. 0.15, Embarked_S .. 0.20
+BT5
+BT6
+-------------------------
+Ensmble with Bagged Approach
+Random Data sets + Random colummns
+
+EnahncedBT1 Random sample + Random columns(2 tiles, sex, no PLCASS, NO Cabin, ) + 5 columns
+EnahncedBT2 Random sample + Random columns(2 tiles, sex, no PLCASS, NO Cabin, ) + 5 columns
+EnahncedBT3 Random sample + Random columns(NO tiles, sex, PLCASS, Cabin, ) + 47 columns
+EnahncedBT4 Random sample + Random columns(1 tiles, NO sex, no PLCASS,  Cabin, ) + 11 columns
+EnahncedBT5 Random sample + Random columns(2 tiles, sex, no PLCASS, NO Cabin, ) ..
+EnahncedBT6 Random sample + Random columns(2 tiles, sex, no PLCASS, NO Cabin, ) ..
+ 
+---------
+Medium.com
+Bagged Tree: Looks reasonably similar
+Random Forest: (), 1 inch 10 inch 20 feet tree = Multile tree with Random columns with Random count
+
+TEST2 RC:  Title_Sir, 
+
+Ensemble.RandomForestClassifier(n_Estimators = 5, max_features =10, 12, 15)
+
+
+EnahncedRFT1 Random sample + Random columns(2 tiles, sex, no PLCASS, NO Cabin, ) + 5 columns
+EnahncedRFT2 Random sample + Random columns(2 tiles, sex, no PLCASS, NO Cabin, ) + 20 columns
+EnahncedRFT3 Random sample + Random columns(NO tiles, sex, PLCASS, Cabin, ) + 47 columns
+EnahncedRFT4 Random sample + Random columns(1 tiles, NO sex, no PLCASS,  Cabin, ) + 11 columns
+EnahncedRFT5 Random sample + Random columns(2 tiles, sex, no PLCASS, NO Cabin, ) ..
+EnahncedEFT6 Random sample + Random columns(2 tiles, sex, no PLCASS, NO Cabin, ) ..
+ 
+
+
+
+
+
+
+
+
+
+
+
