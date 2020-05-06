@@ -1,0 +1,19 @@
+1. Download libxgboost.dll from the below link
+     http://www.picnet.com.au/blogs/guido/post/2016/09/22/xgboost-windows-x64-binaries-for-download/
+     Or
+     https://picnet.com.au/blog/xgboost-windows-x64-binaries-for-download/
+
+2. Create a folder 'XGBoost' in c directory
+
+3. Open Anaconda command promt and run the below commands
+    cd c:/
+    git clone https://github.com/dmlc/xgboost.git XGBoost
+
+4. Copy xgboost.dll (downloaded from the above link) into the XGBoost\python-package\xgboost\
+
+5. Run below command in Anaconda Command Prompt
+    cd XGBoost\python-package\
+    python setup.py install
+
+NOTE: Below link consists of details about the XGBoost Parameters
+	http://xgboost.readthedocs.io/en/latest/parameter.html
