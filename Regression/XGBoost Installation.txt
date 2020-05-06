@@ -1,7 +1,7 @@
 1. Download libxgboost.dll from the below link
-     http://www.picnet.com.au/blogs/guido/post/2016/09/22/xgboost-windows-x64-binaries-for-download/
-     Or
      https://picnet.com.au/blog/xgboost-windows-x64-binaries-for-download/
+     Or refer to 
+     https://anaconda.org/conda-forge/xgboost
 
 2. Create a folder 'XGBoost' in c directory
 
