@@ -1,3 +1,8 @@
+Option1:
+pip install xgboost
+Refer to: https://pypi.org/project/xgboost/#modal-close
+
+Option2: 
 1. Download libxgboost.dll from the below link
      https://picnet.com.au/blog/xgboost-windows-x64-binaries-for-download/
      Or refer to 
