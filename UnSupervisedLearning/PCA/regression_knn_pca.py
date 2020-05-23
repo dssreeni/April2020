@@ -1,12 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed May 20 23:44:46 2020
-
-@author: 143555
-"""
-
-# -*- coding: utf-8 -*-
-"""
 @author: Sreenivas.J
 """
 
