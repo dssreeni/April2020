@@ -194,6 +194,7 @@ y_train = house_train['log_sale_price']
 lasso_estimator = linear_model.Lasso()
 lasso_grid = {'alpha':[0.01, 0.5, 0.7, 1]}
 
+#Ref: https://scikit-learn.org/stable/auto_examples/feature_selection/plot_select_from_model_diabetes.html?highlight=linear_model%20lasso#sphx-glr-download-auto-examples-feature-selection-plot-select-from-model-diabetes-py
 X_train.shape
 clf = LassoCV().fit(X_train, y_train)
 importance = np.abs(clf.coef_)
