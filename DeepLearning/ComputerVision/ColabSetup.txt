@@ -1,0 +1,36 @@
+#First go to Kaggle-->Your profile-->Generate API token
+#Download the Jason file and copy into C:\Users\Sreenivas.J\.Kaggle folder. If .Kaggle folder doesn't exists, create from command prompt as it has .prefix
+
+#You have to do this exercice every time though!
+from google.colab import files
+files.upload()
+
+!pip install kaggle;
+
+!mkdir .kaggle/
+!mv kaggle.json .kaggle/
+#Alternatively you can use:
+#Copyng kaggle.json to .kaggle folder
+!cp kaggle.json ~/.kaggle/
+
+!chmod 600 /content/.kaggle/kaggle.json #Granting permissions
+!kaggle config set -n path -v '/content' #Not required
+
+#Kaggle API
+!kaggle competitions download -c dogs-vs-cats-redux-kernels-edition
+
+!unzip /content/competitions/dogs-vs-cats-redux-kernels-edition/test.zip
+#Alternatively
+!unzip /content/test.zip
+!unzip /content/train.zip
+-------------------------
+Sample code changes that you need to make it to run in Colab:
+os.chdir('/content') #Google Colab notation
+
+train_dir, validation_dir, test_dir, nb_train_samples, nb_validation_samples,nb_test_samples = \
+                    utils.preapare_full_dataset_for_flow(
+                            train_dir_original='train',  #Google Colab notation
+                            test_dir_original='test',  #Google Colab notation
+                            target_base_dir='target base dir')  #Google Colab notation
+
+    id = int(file.split('/')[1].split('.')[0]) #Google Colab notation (backward slash)
