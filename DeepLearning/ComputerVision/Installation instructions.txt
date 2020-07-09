@@ -1,0 +1,45 @@
+step1: download anaconda distribution and install it (If you already have it, then no need again)
+step2: add the path of anaconda to path environment variable
+        C:\Users\sreenivas.j\AppData\Local\Continuum\anaconda3\Scripts (This is my Anaconda path, you check where you installed Anaconda3 and add apprpriate path)
+	
+Help:        
+How to get to Environment Vairables: Right click on my computer-->Properties-->Advanced System settings-->Click on Evironment Variables and then add
+above path under User Variables.
+
+***Refer to https://www.tensorflow.org/install/install_windows
+
+step3: create a new environment and install tensorflow, keras and other required libraries from
+        Go to Anaconda prompt
+	conda create -n keras-tf python=3.5 
+	activate keras-tf (deactivate)
+	conda install keras
+	conda install spyder
+	conda install matplotlib
+	conda install pandas
+	pip install sklearn
+	pip install numpy
+    
+Step4: test the installation
+   start spyder and perfrom import keras
+   
+   To test whether your installation is working fine!! 
+   Add below command in Spyder and run.
+   
+   from keras.models import Sequential
+
+----------------------------------
+step1: download anaconda distribution and install it
+step2: add the path of anaconda to path environment variable
+        (C:\Users\Algorithmica\Anaconda3\Scripts) 
+step3: create a new environment and install tensorflow, keras and other required libraries from
+       anaconda prompt
+	conda create -n keras-tf python=3.5 
+	activate keras-tf
+	conda install keras
+	conda install spyder
+	conda install matplotlib
+	conda install pandas
+	pip install sklearn
+	pip install numpy
+Step4: test the installation
+   start spyder and perfrom import keras
