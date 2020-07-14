@@ -1,0 +1,2 @@
+You can download GloVe file(s) from Stanford website. 
+http://nlp.stanford.edu/data/glove.6B.zip
